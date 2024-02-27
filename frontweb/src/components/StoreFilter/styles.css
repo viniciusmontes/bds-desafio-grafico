@@ -8,7 +8,13 @@
 .store-filter-select__control {
   width: 270px;
   height: 50px;
-  border: 1px solid #8D8D8D !important;
-  color: #8D8D8D !important;
-  
+  border: 1px solid #8d8d8d !important;
+  color: #8d8d8d !important;
+}
+
+@media (min-width: 576px) {
+  .store-filter-container {
+    justify-content: flex-start;
+    padding-left: 30px;
+  }
 }

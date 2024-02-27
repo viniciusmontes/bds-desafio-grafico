@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import StoreFilter, { SelectFilterData } from '../../components/StoreFilter';
 import { requestBackend } from '../../util/requests';
 import SalesCard from '../../components/SalesCard';
+import { Sales } from '../../types/sales';
 
 import './styles.css';
-import { Sales } from '../../types/sales';
 
 type ControlComponents = {
   storeFilterData: SelectFilterData;

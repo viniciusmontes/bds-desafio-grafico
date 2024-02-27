@@ -1,12 +1,9 @@
 import Chart from 'react-apexcharts';
 
-
 export type ChartData = {
-    labels: string[];
-    series: number[];
-  };
-
-
+  labels: string[];
+  series: number[];
+};
 
 type Props = {
   labels: string[];
@@ -19,7 +16,7 @@ const DonutChart = ({ labels, series }: Props) => {
       options={{ legend: { position: 'bottom' }, labels }}
       series={series}
       type="donut"
-      height="240"
+      height="295"
     />
   );
 };

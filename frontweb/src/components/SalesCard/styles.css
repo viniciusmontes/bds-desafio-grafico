@@ -1,16 +1,32 @@
 .sales-card-container {
-    padding: 50px 10px 50px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
+  padding: 50px 15px 50px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  min-height: 520px;
 }
 .sales-card-container h1 {
-    font-size: 36px;
-    color : #334AC3;
+  font-size: 36px;
+  color: #334ac3;
 }
 .sales-card-container span {
-    font-weight: 400;
-    font-size: 18px;
-    color : #8D8D8D
+  font-weight: 400;
+  font-size: 18px;
+  color: #8d8d8d;
 }
 
+.sales-card-text-container {
+  margin-bottom: 50px;
+}
+@media (min-width: 576px) {
+  .sales-card-container {
+    padding: 50px 40px 50px;
+  }
+}
+@media (min-width: 992px) {
+  .sales-card-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
