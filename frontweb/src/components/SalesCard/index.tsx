@@ -1,4 +1,4 @@
-import { Sales, totalSales } from '../../types/sales';
+import { Gender, Sales, totalSales } from '../../types/sales';
 import DonutChart, { ChartData } from '../DonutChart';
 import { formatPrice } from '../../util/formatters';
 
@@ -9,16 +9,27 @@ type Props = {
 };
 
 const SalesCard = ({ sales }: Props) => {
+
+  const formatGender = (gender: Gender) => {
+    const textByGender = {
+      MALE: 'Masculino',
+      FEMALE: 'Feminino',
+      OTHER: 'Outros',
+    };
+
+    return textByGender[gender];
+  };
+
   return (
     <>
       <div className="sales-card-container base-card">
         <div className="sales-card-text-container">
-        <h1>{formatPrice(Number(totalSales(sales)))}</h1>
-        <span>Total de vendas</span>
+          <h1>{formatPrice(Number(totalSales(sales)))}</h1>
+          <span>Total de vendas</span>
         </div>
         <div className="sales-card-chart-container">
           <DonutChart
-            labels={sales.map((x) => x.gender)}
+            labels={sales.map((x) => formatGender(x.gender as Gender))}
             series={sales.map((x) => x.sum)}
           />
         </div>

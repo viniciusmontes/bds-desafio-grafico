@@ -34,6 +34,8 @@ const Home = () => {
   const handleSubmitFilter = (data: SelectFilterData) => {
     setControlComponents({ storeFilterData: data });
   };
+
+  
   return (
     <>
       <div className="home-container">
