@@ -1,0 +1,11 @@
+.navbar-container {
+    height: 70px;
+    align-items: center;
+    padding-left: 30px;
+    background-color: #fff;
+}
+
+.navbar-title {
+    color: #334AC3;
+    font-size: 24px;
+}

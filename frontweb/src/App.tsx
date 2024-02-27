@@ -1,9 +1,13 @@
+import './assets/styles/custom.scss'
 import "./App.css";
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div>
-      <h1>Desafio gráfico</h1>
+      <Navbar/>
+      <Home/>
     </div>
   );
 }
